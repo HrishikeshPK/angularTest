@@ -6,11 +6,9 @@ import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
     {
-        path:'',component:HomeComponent
+        path:'',component:LandingPageComponent
     },
-    {
-        path:'dashboard', component:LandingPageComponent
-    },
+    
     {
         path:'register',component:RegisterComponent
     },

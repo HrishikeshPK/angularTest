@@ -1,5 +1,16 @@
-<!-- @for (item of quotes.products; track $index) {
-    <h1>{{item.title}}</h1>
-} -->
+<div class="row">
+    <h1 class="text-center mt-4">Product List</h1>
+    @for (item of productList; track $index) {
+    <div class="col m-3">
+        <div class="col card p-5">
+            <img [src]="item.thumbnail" width="300px" height="200px" alt="{{ item.title }}" class="product-image" />
+            <h3>{{ item.title }}</h3>
+            <p><b>Category:</b> {{ item.category }}</p>
+            <p><b>Description:</b> {{ item.description }}</p>
+            <p><b>Price:</b> ${{ item.price }}</p>
+        </div>
+    </div>
 
-<h1>{{quotes.quote}}</h1>
+    }
+
+</div>

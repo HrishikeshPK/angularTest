@@ -8,7 +8,7 @@ export class ApiService {
 
   constructor(private http:HttpClient) { }
 
-  getProductDetailsApi(){
-    return this.http.get('https://dummyjson.com/quotes/random')
+  getProductApi(){
+    return this.http.get('https://dummyjson.com/products')
   }
 }

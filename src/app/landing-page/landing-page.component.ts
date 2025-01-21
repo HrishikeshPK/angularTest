@@ -9,17 +9,19 @@ import { ApiService } from '../services/api.service';
   styleUrl: './landing-page.component.css'
 })
 export class LandingPageComponent implements OnInit {
-  quotes:any=[]
+  productList:any=[]
 
   constructor(private api:ApiService){}
   ngOnInit(): void {
-    this.getDetails()
+    this.getProduct()
   }
 
-  getDetails(){
-    this.api.getProductDetailsApi().subscribe((res:any)=>{
-      console.log(res)
-      this.quotes=res
+  getProduct(){
+    this.api.getProductApi().subscribe((response:any)=>{
+      console.log(response);
+      this.productList=response.products
     })
   }
+
 }
+
